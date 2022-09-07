@@ -1,5 +1,5 @@
 import LoadMoreButton from '../components/LoadMoreButton/LoadMoreButton';
-import HomeGalleryList from '../components/GalleryList/HomeGalleryList';
+import HomeList from '../components/MovieList/HomeList';
 import { useState, useEffect } from 'react';
 import { getTrendsOfMovies } from '../services/getMovies';
 import { useLocation } from 'react-router-dom';
@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <>
-      <HomeGalleryList movies={movies} state={{ from: location }} />
+      <HomeList movies={movies} state={{ from: location }} />
       {total !== page && <LoadMoreButton onClick={handleLoadMoreButton} />}
     </>
   );
