@@ -30,7 +30,7 @@ const Reviews = () => {
           </ul>
         </>
       ) : (
-        <p>No reviews... Sorry.</p>
+        <p>We don't have any reviews for this movie.</p>
       )}
     </>
   );

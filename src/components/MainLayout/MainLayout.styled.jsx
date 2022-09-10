@@ -2,13 +2,14 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0 18px;
 `;
 
 export const Header = styled.header`
   padding: 10px 0;
+  border-bottom: 1px solid #ececec;
 
   & > nav {
     display: flex;

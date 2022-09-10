@@ -7,7 +7,7 @@ const searchSchema = Yup.object().shape({
     .min(2, 'Too Short!')
     .max(20, 'Too Long')
     .required('Required'),
-});
+})
 
 const Search = ({ onSubmit }) => {
   return (

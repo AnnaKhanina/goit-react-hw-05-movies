@@ -29,7 +29,7 @@ const MovieInfo = () => {
       {isLoad ? (
         <>
           <Link to={backLink}>
-            <BiArrowBack size="12" />
+            <BiArrowBack size="14" color="tomato" />
             Back
           </Link>
           <MovieAboutItemStyled>
