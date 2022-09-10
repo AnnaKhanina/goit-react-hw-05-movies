@@ -1,7 +1,7 @@
 import LoadMoreButton from '../components/LoadMoreButton/LoadMoreButton';
 import HomeList from '../components/MovieList/HomeList';
 import { useState, useEffect } from 'react';
-import { getTrendsOfMovies } from '../services/getMovies';
+import { getTrending } from '../services/getMovies';
 import { useLocation } from 'react-router-dom';
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    getTrendsOfMovies(page).then(movies => {
+    getTrending(page).then(movies => {
       setMovies(prevState => [...prevState, ...movies.results]);
       setTotal(movies.total_pages);
     });

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { ThreeCircles } from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
-import { IoArrowBack } from 'react-icons/io5';
+import { BiArrowBack } from 'react-icons/bi';
 
 const MovieInfo = () => {
   const [movie, setMovie] = useState({});
@@ -29,11 +29,11 @@ const MovieInfo = () => {
       {isLoad ? (
         <>
           <Link to={backLink}>
-            <IoArrowBack size="10" />
+            <BiArrowBack size="12" />
             Back
           </Link>
           <MovieAboutItemStyled>
-            <img src={imageURL} width="300" alt={title} />
+            <img src={imageURL} width="400" alt={title} />
             <div>
               <h1>
                 {title} ({releaseYear})
