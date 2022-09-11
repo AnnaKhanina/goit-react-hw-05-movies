@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Container, Header, Link } from './MainLayout.styled';
 import { Suspense } from 'react';
-import { TailSpin } from 'react-loader-spinner';
+import { Hearts } from 'react-loader-spinner';
 
 const MainLayout = () => {
   return (
@@ -14,12 +14,11 @@ const MainLayout = () => {
       </Header>
       <Suspense
         fallback={
-          <TailSpin
+          <Hearts 
             height="80"
             width="80"
-            color="#000"
-            ariaLabel="tail-spin-loading"
-            radius="1"
+            color="tomato"
+            ariaLabel="hearts-loading"
             wrapperStyle={{}}
             wrapperClass=""
             visible={true}

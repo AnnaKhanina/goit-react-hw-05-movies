@@ -1,10 +1,12 @@
 import { MovieAboutItemStyled } from 'components/MovieAboutItem/MovieAboutItem.styled';
+import { MovieDetailsStyled } from '../pages/MovieDetails.styled';
 import { getInfo } from '../services/getMovies';
 import { useState, useEffect } from 'react';
 import { useParams, Outlet, useLocation } from 'react-router-dom';
-import { ThreeCircles } from 'react-loader-spinner';
+import { Hearts } from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
+
 
 const MovieInfo = () => {
   const [movie, setMovie] = useState({});
@@ -30,7 +32,9 @@ const MovieInfo = () => {
         <>
           <Link to={backLink}>
             <BiArrowBack size="14" color="tomato" />
-            Back
+            <MovieDetailsStyled>
+              <span>Back</span>
+            </MovieDetailsStyled>
           </Link>
           <MovieAboutItemStyled>
             <img src={imageURL} width="400" alt={title} />
@@ -64,18 +68,15 @@ const MovieInfo = () => {
           <hr />
         </>
       ) : (
-        <ThreeCircles
-            height="100"
-            width="100"
-            color="#4fa94d"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-            ariaLabel="three-circles-rotating"
-            outerCircleColor=""
-            innerCircleColor=""
-            middleCircleColor=""
-            />
+        <Hearts 
+          height="80"
+          width="80"
+          color="tomato"
+          ariaLabel="hearts-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
       )}
       <Outlet />
     </div>

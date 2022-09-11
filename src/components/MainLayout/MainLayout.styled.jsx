@@ -8,9 +8,8 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  padding: 10px 0;
-  border-bottom: 1px solid #ececec;
-
+  padding: 20px 0;
+  
   & > nav {
     display: flex;
   }
@@ -25,6 +24,6 @@ export const Link = styled(NavLink)`
 
   &.active {
     color: white;
-    background-color: orangered;
+    background-color: tomato;
   }
 `;
